@@ -11,12 +11,21 @@
 
 using namespace std;
 
+class Code;
+class Response;
+
 class Mastermind {
 
     public:
         // Constructors
-        Mastermind();
-        Mastermind(int n1, int m1);
+        Mastermind() : n(5), m(10) {
+            code = Code(n, m);
+            code.randomizeCode();
+        };
+        Mastermind(int n1, int m1) : n(n1), m(m1) {
+            code = Code(n, m);
+            code.randomizeCode();
+        }
 
         //Member functions
         Code humanGuess();
@@ -25,9 +34,9 @@ class Mastermind {
         void playGame();
 
     private:
-        Code code;
         int n;
         int m;
+        Code code;
 
 };
 

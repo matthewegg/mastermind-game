@@ -9,12 +9,6 @@
 
 using namespace std;
 
-// Constructor
-Response::Response(int correctSpots, int wrongSpots) {
-    correct = correctSpots;
-    wrongPlace = wrongSpots;
-}
-
 // Class functions
 void Response::setCorrect(int corr) {
     this->correct = corr;

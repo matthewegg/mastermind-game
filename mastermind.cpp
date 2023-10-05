@@ -12,19 +12,21 @@
 
 using namespace std;
 
+/*
 Mastermind::Mastermind() {
     n = 5;
     m = 10;
-	Code code(n, 5);
+	code = Code(n, m);
 	code.randomizeCode();
 }
 
 Mastermind::Mastermind(int n1, int m1) {
     n = n1;
     m = m1;
-	Code code(n1, m1);
+	code = Code(n, m);
 	code.randomizeCode();
 }
+*/
 
 Code Mastermind::humanGuess() {
     string guess;
@@ -51,6 +53,10 @@ Code Mastermind::humanGuess() {
 				throw invalid_argument("Invalid guess. Only integer inputs allowed.");
 			}
     	}
+
+		if (stoi(num) > m) {
+			throw invalid_argument("Invalid guess. Your guess must be in the range [0, " + to_string(m - 1) + "].");
+		}
 
 		guess_vec.push_back(stoi(num));
 		ind1 = ind2+1;

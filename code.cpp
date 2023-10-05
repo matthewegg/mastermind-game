@@ -13,37 +13,6 @@
 
 using namespace std;
 
-/*
-Code::Code() {
-	// Default constructor
-}
-*/
-
-/** Initializes a Code object of n digits in range [0, m-1].
- * 
- * Assumptions: none
- * Limitations: none
- * 
- */
- 
-Code::Code(int n, int m)
-{
-	for (int i=0; i<size; i++)
-	{
-		code.push_back(0);
-	}
-}
-
-/** Initializes a Code object with an already defined code.
- * 
- * Assumptions: none
- * Limitations: none
- */
-Code::Code(vector<int> manualInputCode)
-{
-	code = manualInputCode;
-}
-
 /** Randomizes the digits of a Code object
  * 
  * Assumptions: none

@@ -15,8 +15,8 @@ class Response {
     public:
 
         // Constructor
-        Response() {};
-        Response(int correct, int wrongSpots);
+        Response() : correct(0), wrongPlace(0) {};
+        Response(int correct, int wrongSpots) : correct(correct), wrongPlace(wrongSpots) {};
 
         // Class functions
         void setCorrect(int corr);
