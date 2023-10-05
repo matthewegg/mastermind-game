@@ -12,15 +12,17 @@
 
 using namespace std;
 
-Mastermind::Mastermind() : code(5, 10) {
+Mastermind::Mastermind() {
     n = 5;
     m = 10;
+	Code code(n, 5);
 	code.randomizeCode();
 }
 
-Mastermind::Mastermind(int n1, int m1) : code(n1, m1) {
+Mastermind::Mastermind(int n1, int m1) {
     n = n1;
     m = m1;
+	Code code(n1, m1);
 	code.randomizeCode();
 }
 
