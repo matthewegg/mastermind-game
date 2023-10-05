@@ -72,16 +72,16 @@ Code Mastermind::humanGuess() {
 }
 
 Response Mastermind::getResponse(Code &guess) {
-	int correct;
-	int incorrect;
-    correct = guess.checkCorrect(guess);
-	incorrect = guess.checkIncorrect(guess);
+	int correct = 0;
+	int incorrect = 0;
+    correct = this->code.checkCorrect(guess);
+	incorrect = this->code.checkIncorrect(guess);
 	Response resp(correct, incorrect);
 	return resp;
 }
 
 bool Mastermind::isSolved(Response &resp) {
-    return (resp.getCorrect() == n && resp.getWrongSpots() == 0);
+    return (resp.getCorrect() == n);
 }
 
 void Mastermind::playGame() {
@@ -92,11 +92,12 @@ void Mastermind::playGame() {
 			cin.ignore();
 		Code guess = this->humanGuess();
 		Response resp = this->getResponse(guess);
-		cout << resp << endl;
 		if (this->isSolved(resp)) {
 			cout << "You win!" << endl;
 			break;
 		}
+		cout << resp << endl;
+		
 		guesses++;
 	}
 	if (guesses == 10) {
