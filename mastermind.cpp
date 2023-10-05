@@ -72,8 +72,8 @@ Code Mastermind::humanGuess() {
 }
 
 Response Mastermind::getResponse(Code &guess) {
-	int correct = 0;
-	int incorrect = 0;
+	int correct;
+	int incorrect;
     correct = guess.checkCorrect(guess);
 	incorrect = guess.checkIncorrect(guess);
 	Response resp(correct, incorrect);
