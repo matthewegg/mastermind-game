@@ -5,7 +5,6 @@
 */
 
 #include <iostream>
-#include <bits/stdc++.h>
 #include "code.h"
 #include "response.h"
 #include "mastermind.h"

@@ -10,7 +10,8 @@
 
 using namespace std;
 
-class Response {
+class Response 
+{
 
     public:
 

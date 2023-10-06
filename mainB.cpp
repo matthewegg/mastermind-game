@@ -5,14 +5,14 @@
 */
 
 #include <iostream>
-#include <bits/stdc++.h>
 #include "code.h"
 #include "response.h"
 #include "mastermind.h"
 
 using namespace std;
 
-int main() {
+int main() 
+{
     int n;
     int m;
     cout << "How many digits would you like in your code?: " << endl;

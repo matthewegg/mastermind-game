@@ -13,7 +13,8 @@
 
 using namespace std;
 
-class Code {
+class Code 
+{
 
 	public:
 		/**
@@ -31,7 +32,8 @@ class Code {
 				code.push_back(0);
 			}
 		}
-		Code(vector<int> manualInputCode) : code(manualInputCode) {
+		Code(vector<int> manualInputCode) : code(manualInputCode) 
+		{
 			size = manualInputCode.size();
 			maxRange = *max_element(manualInputCode.begin(), manualInputCode.end());
 		}
