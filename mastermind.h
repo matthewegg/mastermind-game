@@ -15,11 +15,13 @@ class Mastermind {
 
     public:
         // Constructors
-        Mastermind() : n(5), m(10) {
+        Mastermind() : n(5), m(10) 
+        {
             code = Code(n, m);
             code.randomizeCode();
         }
-        Mastermind(int n1, int m1) : n(n1), m(m1) {
+        Mastermind(int n1, int m1) : n(n1), m(m1) 
+        {
             code = Code(n, m);
             code.randomizeCode();
         }
