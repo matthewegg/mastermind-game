@@ -13,29 +13,25 @@
 
 using namespace std;
 
-class Code 
-{
+class Code {
 
 	public:
 		/**
 		 * Constructors
 		 */ 
-		Code() : size(5), maxRange(10) 
-		{
+		Code() : size(5), maxRange(10) {
             for (int i=0; i<size; i++)
 			{
 				code.push_back(0);
 			}
         }
-		Code(int n, int m) : size(n), maxRange(m) 
-		{
+		Code(int n, int m) : size(n), maxRange(m) {
 			for (int i=0; i<size; i++)
 			{
 				code.push_back(0);
 			}
 		}
-		Code(vector<int> manualInputCode) : code(manualInputCode) 
-		{
+		Code(vector<int> manualInputCode) : code(manualInputCode) {
 			size = manualInputCode.size();
 			maxRange = *max_element(manualInputCode.begin(), manualInputCode.end());
 		}
